@@ -165,3 +165,85 @@ void DisplayCharacter(char ch)
     }
 }
 
+
+// instruccion switch
+
+DisplayMeasurement2(-4);
+DisplayMeasurement2(5);
+DisplayMeasurement2(10);
+DisplayMeasurement2(double.NaN);
+
+void DisplayMeasurement2(double measurement)
+{
+    switch (measurement)
+    {
+        case < 0.0:
+            Console.WriteLine($"Measured value is {measurement}; too low.");
+            break;
+
+            case < 15.0: 
+            Console.WriteLine($"Measured value is {measurement}; too high.");
+            break;
+
+        case double.NaN:
+            Console.WriteLine("Failed measurement.");
+            break;
+
+
+        default:
+            Console.WriteLine($"Measure value is {measurement}.");
+            break;
+    }
+}
+
+
+//estructura de iteracion
+
+//estructura for
+
+for (int f  = 0; e < 3; e++)
+{
+    Console.Write(e);           //resultado 012
+}
+
+
+
+//instruccion foreach
+List<int> fibNumbers = new() { 0, 1, 2, 3, 4, 5, 8, 13 };
+foreach (int element in fibNumbers)
+{
+    Console.Write($"{element}");
+}
+
+//instruccion do
+
+int n = 0;
+do
+{
+    Console.Write(n);           //resultado 01234
+    n++;
+} while (n < 5);
+
+
+
+//instruccion while
+
+int s = 0;
+while (s < 5)
+{
+    Console.Write(s); //resultado 01234
+    n++;
+}
+
+
+
+//funciones
+
+string GetName(int ID)
+{
+    if (ID < names.Length)
+         return names[ID];
+    else
+        return String.Empty;
+}
+string[] names = { "Spencer", "Sally", "Doug" };
